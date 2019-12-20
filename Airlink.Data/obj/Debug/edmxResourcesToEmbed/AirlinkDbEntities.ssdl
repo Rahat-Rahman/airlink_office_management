@@ -1,0 +1,90 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="AirlinkDbModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2008" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityType Name="Department">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Name" Type="nvarchar" MaxLength="50" Nullable="false" />
+  </EntityType>
+  <EntityType Name="EmployeeTable">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="nchar" MaxLength="30" Nullable="false" />
+    <Property Name="Name" Type="nvarchar" MaxLength="150" Nullable="false" />
+    <Property Name="DOB" Type="datetime" Nullable="false" />
+    <Property Name="Designation" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="Email" Type="nvarchar" MaxLength="150" Nullable="false" />
+    <Property Name="departmentId" Type="int" Nullable="false" />
+    <Property Name="Username" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="ProfilePic" Type="nvarchar" MaxLength="100" />
+    <Property Name="Password" Type="nvarchar" MaxLength="50" Nullable="false" />
+  </EntityType>
+  <EntityType Name="ExportRequest">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Status" Type="int" Nullable="false" />
+    <Property Name="ReceiverName" Type="nvarchar" MaxLength="100" Nullable="false" />
+    <Property Name="ReceiverCountry" Type="nvarchar" MaxLength="100" Nullable="false" />
+    <Property Name="ReceiverAddress" Type="nvarchar" MaxLength="300" Nullable="false" />
+    <Property Name="ReceiverContactNo" Type="nvarchar" MaxLength="80" Nullable="false" />
+    <Property Name="SenderName" Type="nvarchar" MaxLength="100" Nullable="false" />
+    <Property Name="SenderAddress" Type="nvarchar" MaxLength="300" Nullable="false" />
+    <Property Name="SenderContactNo" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="ParcelType" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="Medium" Type="nvarchar" MaxLength="50" />
+    <Property Name="AirbillNo" Type="nvarchar" MaxLength="100" />
+  </EntityType>
+  <EntityType Name="ImportRequest">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Status" Type="int" Nullable="false" />
+    <Property Name="SenderName" Type="nvarchar" MaxLength="100" Nullable="false" />
+    <Property Name="SenderContactNo" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="Medium" Type="nvarchar" MaxLength="50" />
+    <Property Name="AirbillNo" Type="nvarchar" MaxLength="50" />
+    <Property Name="ReceiverName" Type="nvarchar" MaxLength="100" Nullable="false" />
+    <Property Name="ReceiverAddress" Type="nvarchar" MaxLength="300" Nullable="false" />
+    <Property Name="ReceiverContact" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="ParcelType" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="IsArrived" Type="bit" />
+  </EntityType>
+  <EntityType Name="Rate">
+    <Key>
+      <PropertyRef Name="RatesID" />
+    </Key>
+    <Property Name="RatesID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Country" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="DHLRate" Type="int" Nullable="false" />
+    <Property Name="TNTRate" Type="int" Nullable="false" />
+    <Property Name="DPEXRate" Type="int" Nullable="false" />
+  </EntityType>
+  <Association Name="FK_EmployeeTable_Department">
+    <End Role="Department" Type="Self.Department" Multiplicity="1" />
+    <End Role="EmployeeTable" Type="Self.EmployeeTable" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Department">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="EmployeeTable">
+        <PropertyRef Name="departmentId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityContainer Name="AirlinkDbModelStoreContainer">
+    <EntitySet Name="Department" EntityType="Self.Department" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="EmployeeTable" EntityType="Self.EmployeeTable" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="ExportRequest" EntityType="Self.ExportRequest" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="ImportRequest" EntityType="Self.ImportRequest" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Rate" EntityType="Self.Rate" Schema="dbo" store:Type="Tables" />
+    <AssociationSet Name="FK_EmployeeTable_Department" Association="Self.FK_EmployeeTable_Department">
+      <End Role="Department" EntitySet="Department" />
+      <End Role="EmployeeTable" EntitySet="EmployeeTable" />
+    </AssociationSet>
+  </EntityContainer>
+</Schema>

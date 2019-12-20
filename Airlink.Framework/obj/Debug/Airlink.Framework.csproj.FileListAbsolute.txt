@@ -1,0 +1,10 @@
+C:\Users\User\documents\visual studio 2013\Projects\Airlink\Airlink.Framework\obj\Debug\Airlink.Framework.csprojResolveAssemblyReference.cache
+C:\Users\User\documents\visual studio 2013\Projects\Airlink\Airlink.Framework\bin\Debug\Airlink.Framework.dll
+C:\Users\User\documents\visual studio 2013\Projects\Airlink\Airlink.Framework\bin\Debug\Airlink.Framework.pdb
+C:\Users\User\documents\visual studio 2013\Projects\Airlink\Airlink.Framework\obj\Debug\Airlink.Framework.dll
+C:\Users\User\documents\visual studio 2013\Projects\Airlink\Airlink.Framework\obj\Debug\Airlink.Framework.pdb
+J:\C sharp\Airlink\Airlink.Framework\bin\Debug\Airlink.Framework.dll
+J:\C sharp\Airlink\Airlink.Framework\bin\Debug\Airlink.Framework.pdb
+J:\C sharp\Airlink\Airlink.Framework\obj\Debug\Airlink.Framework.csprojResolveAssemblyReference.cache
+J:\C sharp\Airlink\Airlink.Framework\obj\Debug\Airlink.Framework.dll
+J:\C sharp\Airlink\Airlink.Framework\obj\Debug\Airlink.Framework.pdb

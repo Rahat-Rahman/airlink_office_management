@@ -1,0 +1,286 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+  <!-- EF Runtime content -->
+  <edmx:Runtime>
+    <!-- SSDL content -->
+    <edmx:StorageModels>
+    <Schema Namespace="AirlinkDbModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2008" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+        <EntityType Name="Department">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Name" Type="nvarchar" MaxLength="50" Nullable="false" />
+        </EntityType>
+        <EntityType Name="EmployeeTable">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="nchar" MaxLength="30" Nullable="false" />
+          <Property Name="Name" Type="nvarchar" MaxLength="150" Nullable="false" />
+          <Property Name="DOB" Type="datetime" Nullable="false" />
+          <Property Name="Designation" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="Email" Type="nvarchar" MaxLength="150" Nullable="false" />
+          <Property Name="departmentId" Type="int" Nullable="false" />
+          <Property Name="Username" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="ProfilePic" Type="nvarchar" MaxLength="100" />
+          <Property Name="Password" Type="nvarchar" MaxLength="50" Nullable="false" />
+        </EntityType>
+        <EntityType Name="ExportRequest">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Status" Type="int" Nullable="false" />
+          <Property Name="ReceiverName" Type="nvarchar" MaxLength="100" Nullable="false" />
+          <Property Name="ReceiverCountry" Type="nvarchar" MaxLength="100" Nullable="false" />
+          <Property Name="ReceiverAddress" Type="nvarchar" MaxLength="300" Nullable="false" />
+          <Property Name="ReceiverContactNo" Type="nvarchar" MaxLength="80" Nullable="false" />
+          <Property Name="SenderName" Type="nvarchar" MaxLength="100" Nullable="false" />
+          <Property Name="SenderAddress" Type="nvarchar" MaxLength="300" Nullable="false" />
+          <Property Name="SenderContactNo" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="ParcelType" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="Medium" Type="nvarchar" MaxLength="50" />
+          <Property Name="AirbillNo" Type="nvarchar" MaxLength="100" />
+        </EntityType>
+        <EntityType Name="ImportRequest">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Status" Type="int" Nullable="false" />
+          <Property Name="SenderName" Type="nvarchar" MaxLength="100" Nullable="false" />
+          <Property Name="SenderContactNo" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="Medium" Type="nvarchar" MaxLength="50" />
+          <Property Name="AirbillNo" Type="nvarchar" MaxLength="50" />
+          <Property Name="ReceiverName" Type="nvarchar" MaxLength="100" Nullable="false" />
+          <Property Name="ReceiverAddress" Type="nvarchar" MaxLength="300" Nullable="false" />
+          <Property Name="ReceiverContact" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="ParcelType" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="IsArrived" Type="bit" />
+        </EntityType>
+        <EntityType Name="Rate">
+          <Key>
+            <PropertyRef Name="RatesID" />
+          </Key>
+          <Property Name="RatesID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Country" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="DHLRate" Type="int" Nullable="false" />
+          <Property Name="TNTRate" Type="int" Nullable="false" />
+          <Property Name="DPEXRate" Type="int" Nullable="false" />
+        </EntityType>
+        <Association Name="FK_EmployeeTable_Department">
+          <End Role="Department" Type="Self.Department" Multiplicity="1" />
+          <End Role="EmployeeTable" Type="Self.EmployeeTable" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Department">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="EmployeeTable">
+              <PropertyRef Name="departmentId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <EntityContainer Name="AirlinkDbModelStoreContainer">
+          <EntitySet Name="Department" EntityType="Self.Department" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="EmployeeTable" EntityType="Self.EmployeeTable" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="ExportRequest" EntityType="Self.ExportRequest" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="ImportRequest" EntityType="Self.ImportRequest" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Rate" EntityType="Self.Rate" Schema="dbo" store:Type="Tables" />
+          <AssociationSet Name="FK_EmployeeTable_Department" Association="Self.FK_EmployeeTable_Department">
+            <End Role="Department" EntitySet="Department" />
+            <End Role="EmployeeTable" EntitySet="EmployeeTable" />
+          </AssociationSet>
+        </EntityContainer>
+      </Schema></edmx:StorageModels>
+    <!-- CSDL content -->
+    <edmx:ConceptualModels>
+      <Schema Namespace="AirlinkDbModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+        <EntityContainer Name="AirlinkDbEntities" annotation:LazyLoadingEnabled="true">
+          <EntitySet Name="Departments" EntityType="AirlinkDbModel.Department" />
+          <EntitySet Name="EmployeeTables" EntityType="AirlinkDbModel.EmployeeTable" />
+          <EntitySet Name="ExportRequests" EntityType="AirlinkDbModel.ExportRequest" />
+          <EntitySet Name="ImportRequests" EntityType="AirlinkDbModel.ImportRequest" />
+          <EntitySet Name="Rates" EntityType="AirlinkDbModel.Rate" />
+          <AssociationSet Name="FK_EmployeeTable_Department" Association="AirlinkDbModel.FK_EmployeeTable_Department">
+            <End Role="Department" EntitySet="Departments" />
+            <End Role="EmployeeTable" EntitySet="EmployeeTables" />
+          </AssociationSet>
+        </EntityContainer>
+        <EntityType Name="Department">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Name" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+          <NavigationProperty Name="EmployeeTables" Relationship="AirlinkDbModel.FK_EmployeeTable_Department" FromRole="Department" ToRole="EmployeeTable" />
+        </EntityType>
+        <EntityType Name="EmployeeTable">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="String" Nullable="false" MaxLength="30" FixedLength="true" Unicode="true" />
+          <Property Name="Name" Type="String" Nullable="false" MaxLength="150" FixedLength="false" Unicode="true" />
+          <Property Name="DOB" Type="DateTime" Nullable="false" Precision="3" />
+          <Property Name="Designation" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="Email" Type="String" Nullable="false" MaxLength="150" FixedLength="false" Unicode="true" />
+          <Property Name="departmentId" Type="Int32" Nullable="false" />
+          <Property Name="Username" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="ProfilePic" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Name="Password" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+          <NavigationProperty Name="Department" Relationship="AirlinkDbModel.FK_EmployeeTable_Department" FromRole="EmployeeTable" ToRole="Department" />
+        </EntityType>
+        <EntityType Name="ExportRequest">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Status" Type="Int32" Nullable="false" />
+          <Property Name="ReceiverName" Type="String" Nullable="false" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Name="ReceiverCountry" Type="String" Nullable="false" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Name="ReceiverAddress" Type="String" Nullable="false" MaxLength="300" FixedLength="false" Unicode="true" />
+          <Property Name="ReceiverContactNo" Type="String" Nullable="false" MaxLength="80" FixedLength="false" Unicode="true" />
+          <Property Name="SenderName" Type="String" Nullable="false" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Name="SenderAddress" Type="String" Nullable="false" MaxLength="300" FixedLength="false" Unicode="true" />
+          <Property Name="SenderContactNo" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="ParcelType" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="Medium" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="AirbillNo" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+        </EntityType>
+        <EntityType Name="ImportRequest">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Status" Type="Int32" Nullable="false" />
+          <Property Name="SenderName" Type="String" Nullable="false" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Name="SenderContactNo" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="Medium" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="AirbillNo" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="ReceiverName" Type="String" Nullable="false" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Name="ReceiverAddress" Type="String" Nullable="false" MaxLength="300" FixedLength="false" Unicode="true" />
+          <Property Name="ReceiverContact" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="ParcelType" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="IsArrived" Type="Boolean" />
+        </EntityType>
+        <EntityType Name="Rate">
+          <Key>
+            <PropertyRef Name="RatesID" />
+          </Key>
+          <Property Name="RatesID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Country" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="DHLRate" Type="Int32" Nullable="false" />
+          <Property Name="TNTRate" Type="Int32" Nullable="false" />
+          <Property Name="DPEXRate" Type="Int32" Nullable="false" />
+        </EntityType>
+        <Association Name="FK_EmployeeTable_Department">
+          <End Type="AirlinkDbModel.Department" Role="Department" Multiplicity="1" />
+          <End Type="AirlinkDbModel.EmployeeTable" Role="EmployeeTable" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Department">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="EmployeeTable">
+              <PropertyRef Name="departmentId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+      </Schema>
+    </edmx:ConceptualModels>
+    <!-- C-S mapping content -->
+    <edmx:Mappings>
+      <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+        <EntityContainerMapping StorageEntityContainer="AirlinkDbModelStoreContainer" CdmEntityContainer="AirlinkDbEntities">
+          <EntitySetMapping Name="Departments">
+            <EntityTypeMapping TypeName="AirlinkDbModel.Department">
+              <MappingFragment StoreEntitySet="Department">
+                <ScalarProperty Name="Name" ColumnName="Name" />
+                <ScalarProperty Name="Id" ColumnName="Id" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="EmployeeTables">
+            <EntityTypeMapping TypeName="AirlinkDbModel.EmployeeTable">
+              <MappingFragment StoreEntitySet="EmployeeTable">
+                <ScalarProperty Name="Password" ColumnName="Password" />
+                <ScalarProperty Name="ProfilePic" ColumnName="ProfilePic" />
+                <ScalarProperty Name="Username" ColumnName="Username" />
+                <ScalarProperty Name="departmentId" ColumnName="departmentId" />
+                <ScalarProperty Name="Email" ColumnName="Email" />
+                <ScalarProperty Name="Designation" ColumnName="Designation" />
+                <ScalarProperty Name="DOB" ColumnName="DOB" />
+                <ScalarProperty Name="Name" ColumnName="Name" />
+                <ScalarProperty Name="Id" ColumnName="Id" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="ExportRequests">
+            <EntityTypeMapping TypeName="AirlinkDbModel.ExportRequest">
+              <MappingFragment StoreEntitySet="ExportRequest">
+                <ScalarProperty Name="AirbillNo" ColumnName="AirbillNo" />
+                <ScalarProperty Name="Medium" ColumnName="Medium" />
+                <ScalarProperty Name="ParcelType" ColumnName="ParcelType" />
+                <ScalarProperty Name="SenderContactNo" ColumnName="SenderContactNo" />
+                <ScalarProperty Name="SenderAddress" ColumnName="SenderAddress" />
+                <ScalarProperty Name="SenderName" ColumnName="SenderName" />
+                <ScalarProperty Name="ReceiverContactNo" ColumnName="ReceiverContactNo" />
+                <ScalarProperty Name="ReceiverAddress" ColumnName="ReceiverAddress" />
+                <ScalarProperty Name="ReceiverCountry" ColumnName="ReceiverCountry" />
+                <ScalarProperty Name="ReceiverName" ColumnName="ReceiverName" />
+                <ScalarProperty Name="Status" ColumnName="Status" />
+                <ScalarProperty Name="Id" ColumnName="Id" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="ImportRequests">
+            <EntityTypeMapping TypeName="AirlinkDbModel.ImportRequest">
+              <MappingFragment StoreEntitySet="ImportRequest">
+                <ScalarProperty Name="IsArrived" ColumnName="IsArrived" />
+                <ScalarProperty Name="ParcelType" ColumnName="ParcelType" />
+                <ScalarProperty Name="ReceiverContact" ColumnName="ReceiverContact" />
+                <ScalarProperty Name="ReceiverAddress" ColumnName="ReceiverAddress" />
+                <ScalarProperty Name="ReceiverName" ColumnName="ReceiverName" />
+                <ScalarProperty Name="AirbillNo" ColumnName="AirbillNo" />
+                <ScalarProperty Name="Medium" ColumnName="Medium" />
+                <ScalarProperty Name="SenderContactNo" ColumnName="SenderContactNo" />
+                <ScalarProperty Name="SenderName" ColumnName="SenderName" />
+                <ScalarProperty Name="Status" ColumnName="Status" />
+                <ScalarProperty Name="Id" ColumnName="Id" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Rates">
+            <EntityTypeMapping TypeName="AirlinkDbModel.Rate">
+              <MappingFragment StoreEntitySet="Rate">
+                <ScalarProperty Name="DPEXRate" ColumnName="DPEXRate" />
+                <ScalarProperty Name="TNTRate" ColumnName="TNTRate" />
+                <ScalarProperty Name="DHLRate" ColumnName="DHLRate" />
+                <ScalarProperty Name="Country" ColumnName="Country" />
+                <ScalarProperty Name="RatesID" ColumnName="RatesID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+        </EntityContainerMapping>
+      </Mapping>
+    </edmx:Mappings>
+  </edmx:Runtime>
+  <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <Connection>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="MetadataArtifactProcessing" Value="EmbedInOutputAssembly" />
+      </DesignerInfoPropertySet>
+    </Connection>
+    <Options>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="ValidateOnBuild" Value="true" />
+        <DesignerProperty Name="EnablePluralization" Value="true" />
+        <DesignerProperty Name="IncludeForeignKeysInModel" Value="true" />
+        <DesignerProperty Name="UseLegacyProvider" Value="true" />
+        <DesignerProperty Name="CodeGenerationStrategy" Value="None" />
+      </DesignerInfoPropertySet>
+    </Options>
+    <!-- Diagram content (shape and connector positions) -->
+    <Diagrams></Diagrams>
+  </Designer>
+</edmx:Edmx>

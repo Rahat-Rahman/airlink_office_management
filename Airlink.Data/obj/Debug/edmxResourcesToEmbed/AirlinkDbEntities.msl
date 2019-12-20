@@ -1,0 +1,74 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="AirlinkDbModelStoreContainer" CdmEntityContainer="AirlinkDbEntities">
+    <EntitySetMapping Name="Departments">
+      <EntityTypeMapping TypeName="AirlinkDbModel.Department">
+        <MappingFragment StoreEntitySet="Department">
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="Id" ColumnName="Id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="EmployeeTables">
+      <EntityTypeMapping TypeName="AirlinkDbModel.EmployeeTable">
+        <MappingFragment StoreEntitySet="EmployeeTable">
+          <ScalarProperty Name="Password" ColumnName="Password" />
+          <ScalarProperty Name="ProfilePic" ColumnName="ProfilePic" />
+          <ScalarProperty Name="Username" ColumnName="Username" />
+          <ScalarProperty Name="departmentId" ColumnName="departmentId" />
+          <ScalarProperty Name="Email" ColumnName="Email" />
+          <ScalarProperty Name="Designation" ColumnName="Designation" />
+          <ScalarProperty Name="DOB" ColumnName="DOB" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="Id" ColumnName="Id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="ExportRequests">
+      <EntityTypeMapping TypeName="AirlinkDbModel.ExportRequest">
+        <MappingFragment StoreEntitySet="ExportRequest">
+          <ScalarProperty Name="AirbillNo" ColumnName="AirbillNo" />
+          <ScalarProperty Name="Medium" ColumnName="Medium" />
+          <ScalarProperty Name="ParcelType" ColumnName="ParcelType" />
+          <ScalarProperty Name="SenderContactNo" ColumnName="SenderContactNo" />
+          <ScalarProperty Name="SenderAddress" ColumnName="SenderAddress" />
+          <ScalarProperty Name="SenderName" ColumnName="SenderName" />
+          <ScalarProperty Name="ReceiverContactNo" ColumnName="ReceiverContactNo" />
+          <ScalarProperty Name="ReceiverAddress" ColumnName="ReceiverAddress" />
+          <ScalarProperty Name="ReceiverCountry" ColumnName="ReceiverCountry" />
+          <ScalarProperty Name="ReceiverName" ColumnName="ReceiverName" />
+          <ScalarProperty Name="Status" ColumnName="Status" />
+          <ScalarProperty Name="Id" ColumnName="Id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="ImportRequests">
+      <EntityTypeMapping TypeName="AirlinkDbModel.ImportRequest">
+        <MappingFragment StoreEntitySet="ImportRequest">
+          <ScalarProperty Name="IsArrived" ColumnName="IsArrived" />
+          <ScalarProperty Name="ParcelType" ColumnName="ParcelType" />
+          <ScalarProperty Name="ReceiverContact" ColumnName="ReceiverContact" />
+          <ScalarProperty Name="ReceiverAddress" ColumnName="ReceiverAddress" />
+          <ScalarProperty Name="ReceiverName" ColumnName="ReceiverName" />
+          <ScalarProperty Name="AirbillNo" ColumnName="AirbillNo" />
+          <ScalarProperty Name="Medium" ColumnName="Medium" />
+          <ScalarProperty Name="SenderContactNo" ColumnName="SenderContactNo" />
+          <ScalarProperty Name="SenderName" ColumnName="SenderName" />
+          <ScalarProperty Name="Status" ColumnName="Status" />
+          <ScalarProperty Name="Id" ColumnName="Id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Rates">
+      <EntityTypeMapping TypeName="AirlinkDbModel.Rate">
+        <MappingFragment StoreEntitySet="Rate">
+          <ScalarProperty Name="DPEXRate" ColumnName="DPEXRate" />
+          <ScalarProperty Name="TNTRate" ColumnName="TNTRate" />
+          <ScalarProperty Name="DHLRate" ColumnName="DHLRate" />
+          <ScalarProperty Name="Country" ColumnName="Country" />
+          <ScalarProperty Name="RatesID" ColumnName="RatesID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>

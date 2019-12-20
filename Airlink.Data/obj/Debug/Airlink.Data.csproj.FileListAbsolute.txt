@@ -1,0 +1,20 @@
+C:\Users\User\documents\visual studio 2013\Projects\Airlink\Airlink.Data\obj\Debug\Airlink.Data.csprojResolveAssemblyReference.cache
+C:\Users\User\documents\visual studio 2013\Projects\Airlink\Airlink.Data\bin\Debug\Airlink.Data.dll
+C:\Users\User\documents\visual studio 2013\Projects\Airlink\Airlink.Data\bin\Debug\Airlink.Data.pdb
+C:\Users\User\documents\visual studio 2013\Projects\Airlink\Airlink.Data\bin\Debug\Airlink.Framework.dll
+C:\Users\User\documents\visual studio 2013\Projects\Airlink\Airlink.Data\bin\Debug\Airlink.Framework.pdb
+C:\Users\User\documents\visual studio 2013\Projects\Airlink\Airlink.Data\obj\Debug\Airlink.Data.dll
+C:\Users\User\documents\visual studio 2013\Projects\Airlink\Airlink.Data\obj\Debug\Airlink.Data.pdb
+C:\Users\User\documents\visual studio 2013\Projects\Airlink\Airlink.Data\bin\Debug\Airlink.Data.dll.config
+C:\Users\User\documents\visual studio 2013\Projects\Airlink\Airlink.Data\bin\Debug\EntityFramework.dll
+C:\Users\User\documents\visual studio 2013\Projects\Airlink\Airlink.Data\bin\Debug\EntityFramework.xml
+J:\C sharp\Airlink\Airlink.Data\bin\Debug\Airlink.Data.dll.config
+J:\C sharp\Airlink\Airlink.Data\bin\Debug\Airlink.Data.dll
+J:\C sharp\Airlink\Airlink.Data\bin\Debug\Airlink.Data.pdb
+J:\C sharp\Airlink\Airlink.Data\bin\Debug\Airlink.Framework.dll
+J:\C sharp\Airlink\Airlink.Data\bin\Debug\EntityFramework.dll
+J:\C sharp\Airlink\Airlink.Data\bin\Debug\Airlink.Framework.pdb
+J:\C sharp\Airlink\Airlink.Data\bin\Debug\EntityFramework.xml
+J:\C sharp\Airlink\Airlink.Data\obj\Debug\Airlink.Data.csprojResolveAssemblyReference.cache
+J:\C sharp\Airlink\Airlink.Data\obj\Debug\Airlink.Data.dll
+J:\C sharp\Airlink\Airlink.Data\obj\Debug\Airlink.Data.pdb

@@ -1,0 +1,5 @@
+C:\Users\User\documents\visual studio 2013\Projects\Airlink\Airlink.Entity\bin\Debug\Airlink.Entity.dll
+C:\Users\User\documents\visual studio 2013\Projects\Airlink\Airlink.Entity\bin\Debug\Airlink.Entity.pdb
+C:\Users\User\documents\visual studio 2013\Projects\Airlink\Airlink.Entity\obj\Debug\Airlink.Entity.csprojResolveAssemblyReference.cache
+C:\Users\User\documents\visual studio 2013\Projects\Airlink\Airlink.Entity\obj\Debug\Airlink.Entity.dll
+C:\Users\User\documents\visual studio 2013\Projects\Airlink\Airlink.Entity\obj\Debug\Airlink.Entity.pdb

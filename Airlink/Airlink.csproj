@@ -1,0 +1,292 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{DE4A9FDD-6ECC-45AE-ACF0-2A02B1702749}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Airlink</RootNamespace>
+    <AssemblyName>Airlink</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="EntityFramework, Version=5.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\EntityFramework.5.0.0\lib\net45\EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="MetroFramework">
+      <HintPath>..\..\..\..\..\Desktop\packages\MetroModernUI.1.4.0.0\lib\net\MetroFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="MetroFramework.Design">
+      <HintPath>..\..\..\..\..\Desktop\packages\MetroModernUI.1.4.0.0\lib\net\MetroFramework.Design.dll</HintPath>
+    </Reference>
+    <Reference Include="MetroFramework.Fonts">
+      <HintPath>..\..\..\..\..\Desktop\packages\MetroModernUI.1.4.0.0\lib\net\MetroFramework.Fonts.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.Entity" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="EmpPage2.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="EmpPage2.Designer.cs">
+      <DependentUpon>EmpPage2.cs</DependentUpon>
+    </Compile>
+    <Compile Include="EmpPageAdmin.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="EmpPageAdmin.Designer.cs">
+      <DependentUpon>EmpPageAdmin.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ExportReqInfo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ExportReqInfo.Designer.cs">
+      <DependentUpon>ExportReqInfo.cs</DependentUpon>
+    </Compile>
+    <Compile Include="HomePage.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="HomePage.Designer.cs">
+      <DependentUpon>HomePage.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ImportReqInfo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ImportReqInfo.Designer.cs">
+      <DependentUpon>ImportReqInfo.cs</DependentUpon>
+    </Compile>
+    <Compile Include="loginPage.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="loginPage.Designer.cs">
+      <DependentUpon>loginPage.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MailSender.cs" />
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="TrackingForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="TrackingForm.Designer.cs">
+      <DependentUpon>TrackingForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="trackingFormDpex.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="trackingFormDpex.Designer.cs">
+      <DependentUpon>trackingFormDpex.cs</DependentUpon>
+    </Compile>
+    <Compile Include="TrackingFormTNT.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="TrackingFormTNT.Designer.cs">
+      <DependentUpon>TrackingFormTNT.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="EmpPage2.resx">
+      <DependentUpon>EmpPage2.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="EmpPageAdmin.resx">
+      <DependentUpon>EmpPageAdmin.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ExportReqInfo.resx">
+      <DependentUpon>ExportReqInfo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="HomePage.resx">
+      <DependentUpon>HomePage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ImportReqInfo.resx">
+      <DependentUpon>ImportReqInfo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="loginPage.resx">
+      <DependentUpon>loginPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <SubType>Designer</SubType>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="TrackingForm.resx">
+      <DependentUpon>TrackingForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="trackingFormDpex.resx">
+      <DependentUpon>trackingFormDpex.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="TrackingFormTNT.resx">
+      <DependentUpon>TrackingFormTNT.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="packages.config" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\IPvt1Irv1_l9O4W1zIYVyhJVaQILgWSKUjAlna4Dc3Ru1WeJ.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\111855.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\8decc5f68fc19e0d6407f09f0221eee4fb7b2d6e.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\8decc5f68fc19e0d6407f09f0221eee4fb7b2d6e1.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\32484.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\14596438144_69510fa676_b.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\home_1.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\plane.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\DHL.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\TNT-logo.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\TNT.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\TnTlogo.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\DPEX-Logo.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\offwhite-clipart-1.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\plane takeoff.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\landing.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\020e8794-23a4-49ab-9f6d-3eef0c46acae.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\TNT1.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\TNT2.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\tnt ex.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\DHLEXPRESS.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Airbus-a330.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\11.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\13.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\user-512.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Airlink.BusinessLogic\Airlink.BusinessLogic.csproj">
+      <Project>{aa4ef5e4-3c11-4f2e-8f17-ddf1db593d9c}</Project>
+      <Name>Airlink.BusinessLogic</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Airlink.Data\Airlink.Data.csproj">
+      <Project>{FA3D7FA5-1CC5-47BF-B5D1-CC2BC60B9FC8}</Project>
+      <Name>Airlink.Data</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Airlink.Framework\Airlink.Framework.csproj">
+      <Project>{ad89b64e-5b25-4af2-bde1-9f6d718c4c09}</Project>
+      <Name>Airlink.Framework</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\LoggedInId\LoggedInId.csproj">
+      <Project>{481f0286-fe41-46b4-ac0d-d505bdd06e3a}</Project>
+      <Name>LoggedInId</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\export-clipart-can-stock-photo_csp16522712.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\20.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\21.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\22.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\23.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\24.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\25.jpg" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

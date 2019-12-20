@@ -1,0 +1,28 @@
+C:\Users\User\documents\visual studio 2013\Projects\Airlink\Airlink.BusinessLogic\obj\Debug\Airlink.BusinessLogic.csprojResolveAssemblyReference.cache
+C:\Users\User\documents\visual studio 2013\Projects\Airlink\Airlink.BusinessLogic\bin\Debug\Airlink.BusinessLogic.dll
+C:\Users\User\documents\visual studio 2013\Projects\Airlink\Airlink.BusinessLogic\bin\Debug\Airlink.BusinessLogic.pdb
+C:\Users\User\documents\visual studio 2013\Projects\Airlink\Airlink.BusinessLogic\bin\Debug\Airlink.Data.dll
+C:\Users\User\documents\visual studio 2013\Projects\Airlink\Airlink.BusinessLogic\bin\Debug\Airlink.Framework.dll
+C:\Users\User\documents\visual studio 2013\Projects\Airlink\Airlink.BusinessLogic\bin\Debug\Airlink.Data.pdb
+C:\Users\User\documents\visual studio 2013\Projects\Airlink\Airlink.BusinessLogic\bin\Debug\Airlink.Framework.pdb
+C:\Users\User\documents\visual studio 2013\Projects\Airlink\Airlink.BusinessLogic\obj\Debug\Airlink.BusinessLogic.dll
+C:\Users\User\documents\visual studio 2013\Projects\Airlink\Airlink.BusinessLogic\obj\Debug\Airlink.BusinessLogic.pdb
+C:\Users\User\documents\visual studio 2013\Projects\Airlink\Airlink.BusinessLogic\bin\Debug\Airlink.BusinessLogic.dll.config
+C:\Users\User\documents\visual studio 2013\Projects\Airlink\Airlink.BusinessLogic\bin\Debug\EntityFramework.dll
+C:\Users\User\documents\visual studio 2013\Projects\Airlink\Airlink.BusinessLogic\bin\Debug\EntityFramework.xml
+C:\Users\User\documents\visual studio 2013\Projects\Airlink\Airlink.BusinessLogic\bin\Debug\LoggedInId.dll
+C:\Users\User\documents\visual studio 2013\Projects\Airlink\Airlink.BusinessLogic\bin\Debug\LoggedInId.pdb
+J:\C sharp\Airlink\Airlink.BusinessLogic\bin\Debug\Airlink.BusinessLogic.dll.config
+J:\C sharp\Airlink\Airlink.BusinessLogic\bin\Debug\Airlink.BusinessLogic.dll
+J:\C sharp\Airlink\Airlink.BusinessLogic\bin\Debug\Airlink.BusinessLogic.pdb
+J:\C sharp\Airlink\Airlink.BusinessLogic\bin\Debug\Airlink.Data.dll
+J:\C sharp\Airlink\Airlink.BusinessLogic\bin\Debug\Airlink.Framework.dll
+J:\C sharp\Airlink\Airlink.BusinessLogic\bin\Debug\EntityFramework.dll
+J:\C sharp\Airlink\Airlink.BusinessLogic\bin\Debug\LoggedInId.dll
+J:\C sharp\Airlink\Airlink.BusinessLogic\bin\Debug\Airlink.Data.pdb
+J:\C sharp\Airlink\Airlink.BusinessLogic\bin\Debug\Airlink.Framework.pdb
+J:\C sharp\Airlink\Airlink.BusinessLogic\bin\Debug\LoggedInId.pdb
+J:\C sharp\Airlink\Airlink.BusinessLogic\bin\Debug\EntityFramework.xml
+J:\C sharp\Airlink\Airlink.BusinessLogic\obj\Debug\Airlink.BusinessLogic.csprojResolveAssemblyReference.cache
+J:\C sharp\Airlink\Airlink.BusinessLogic\obj\Debug\Airlink.BusinessLogic.dll
+J:\C sharp\Airlink\Airlink.BusinessLogic\obj\Debug\Airlink.BusinessLogic.pdb
